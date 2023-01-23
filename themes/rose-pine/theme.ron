@@ -1,14 +1,14 @@
 #![enable(implicit_some)]
 (
-    border_width: 3,
-    margin: 6,
-    workspace_margin: 6,
+    border_width: 2,
+    margin: 3,
+    workspace_margin: 3,
     default_width: None,
     default_height: None,
     always_float: None,
     gutter: None,
     default_border_color: "#6e6a86",
     floating_border_color: "#908caa",
-    focused_border_color: "#9ccfd8",
+    focused_border_color: "#c4a7e7",
     on_new_window: None,
 )

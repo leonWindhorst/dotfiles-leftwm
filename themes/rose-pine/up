@@ -22,11 +22,6 @@ if [ -x "$(command -v feh)" ]; then
   feh --bg-fill --randomize $SCRIPTPATH/wallpapers/
 fi
 
-# extra utils to make this theme a little more homey
-if [ -x "$(command -v dunst)" ]; then
-  dunst -config ~/.config/dunst/dunstrc &
-fi
-
 # boot a polybar for each monitor
 cd ${SCRIPTPATH}/polybar
 polybar -m | sed s/:.*// | tac | while read -r monitor

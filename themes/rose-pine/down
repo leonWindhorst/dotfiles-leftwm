@@ -5,12 +5,3 @@ leftwm-command "UnloadTheme"
 
 pkill picom
 pkill polybar
-pkill dunst
-
-#remove desire.conf symlink and, remove appended text
-cd $HOME/.config/kitty/
-rm desire.conf
-sed -i '/desire.conf/d' kitty.conf
-cd $SCRIPTPATH
-
-kill $(ps aux | grep "layout.sh" | grep -v grep | awk '{print $2}')

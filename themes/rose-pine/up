@@ -23,8 +23,8 @@ if [ -x "$(command -v feh)" ]; then
 fi
 
 # boot a polybar for each monitor
-cd ${SCRIPTPATH}/polybar
-polybar -m | sed s/:.*// | tac | while read -r monitor
-do
-  monitor=$monitor polybar -c config.ini main &> /tmp/polybar.log &
-done
+if [ -x "$(command -v polybar)" ]; then
+    polybar -m | sed s/:.*// | while read -r monitor; do
+        monitor=$monitor polybar -c ${SCRIPTPATH}/polybar/config.ini main &> /tmp/polybar.log &
+    done
+fi
